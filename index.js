@@ -160,4 +160,18 @@ const TEAMCHAT_PORT = 4002;
   await chatbotClient.start()
   console.log(`Zoom Rivet events servers running on ports ${CHATBOT_PORT} and ${TEAMCHAT_PORT}...`)
 })();
+import { ChatbotClient } from "@zoom/rivet/chatbot";
+
+(async () => {
+  const chatbotClient = new ChatbotClient({
+    clientId: "CLIENT_ID",
+    clientSecret: "CLIENT_SECRET",
+    webhooksSecretToken: "WEBHOOK_SECRET_TOKEN"
+  });
+
+  // Zoom Rivet code goes here!
+
+  const server = await chatbotClient.start();
+  console.log(`Zoom Rivet Events Server running on: ${JSON.stringify(server.address())}`);
+})();
 
