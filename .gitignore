@@ -5,3 +5,5 @@ package-lock.json
 pnpm-lock.yaml
 https://github.com/zoom/rivet-javascript-sample.git
 
+sudo unzip ~/Downloads/ngrok-v3-stable-darwin-arm64.zip -d /usr/local/bin
+
